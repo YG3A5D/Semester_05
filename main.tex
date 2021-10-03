@@ -1,0 +1,514 @@
+\documentclass[12pt,oneside,a4paper]{report}
+
+% Importing packages 
+\usepackage{graphicx} 	% Package used for inserting images 
+\graphicspath{{images/}}
+
+\usepackage{setspace}   % Package used for paragraph spacing adjustment
+\usepackage[tmargin=1in,bmargin=1in,lmargin=0.5in,rmargin=0.5in]{geometry}  % Package used for inserting margins, page layouts etc.
+
+\usepackage{fontenc} % Package used for conversion of Special Characters{& , <>}
+\usepackage{hyperref}
+\hypersetup{colorlinks = true, citecolor = blue, linkcolor = blue, urlcolor = blue}
+
+\usepackage{fancyhdr}  % Package for inserting Headers & footers
+\pagestyle{fancy}
+\fancyhead{}
+\lhead{2019BTCS088}
+\rhead{II Year}
+\renewcommand{\footrulewidth}{0.1pt}
+\fancyfoot{}
+\rfoot{\thepage}
+\renewcommand{\footrulewidth}{0.1pt}
+\renewcommand*\contentsname{\centering{CONTENTS}}
+%\usepackage[nodayofweek,level]{datetime}
+
+% Document begins 
+\begin{document}
+
+%First Page Begins
+%----------------------------------------------------------------------%
+
+\begin{large}
+\begin{center}
+\fontsize{18pt}{10pt}\selectfont
+\underline{\textbf{SYMBIOSIS UNIVERSITY OF APPLIED SCIENCES}}\\
+\vspace{5.0mm}\underline{\textbf{INDORE}}
+\end{center}
+\end{large}
+\vspace{5.0mm}
+
+% Inserting SUAS logo
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.5]{suas_logo.png}
+\end{figure}
+
+\begin{center}
+\fontsize{14pt}{10pt}\selectfont
+\vspace{0.3in} An INTERNSHIP REPORT\\ \vspace{5.0mm}ON\\ 
+\vspace{5.0mm}\textbf{“MLOps Using DevOps-Assembly Lines”}
+
+
+\fontsize{14pt}{10pt}\selectfont
+\vspace{0.4in} Submitted to “Symbiosis University of Applied Sciences, Indore"\\
+\fontsize{14pt}{10pt}\selectfont
+As an Internship report for the partial fulfillment of the award of degree of\\
+\vspace{0.5in}
+BACHELOR OF TECHNOLOGY\\ \vspace{5.0mm}IN\\ \vspace{5.0mm} SCHOOL OF COMPUTER SCIENCE \& INFORMATION TECHNOLOGY
+\end{center}
+\begin{flushleft}
+\vspace{15.0mm}\hspace{10mm}Submitted To:
+\hspace{3.0in} Submitted By:\\ \hspace{10mm}Mentor Name: Vimal Daga \hspace{2.1in} Name: Yash Gupta\\ \hspace{10mm}Designation: CTO LW Informatics Pvt. Ltd\hspace{0.99in}Roll No: 2019BTCS088
+\end{flushleft}
+
+% Second Page Begins
+%----------------------------------------------------------------------%
+\newpage
+
+\begin{large}
+\begin{center}
+\fontsize{18pt}{10pt}\selectfont
+\underline{\textbf{SYMBIOSIS UNIVERSITY OF APPLIED SCIENCES}}\\
+\vspace{5.0mm}\underline{\textbf{INDORE}}
+\end{center}
+\end{large}
+\vspace{0.35in}
+\begin{large}
+\begin{center}
+\fontsize{16pt}{10pt}\selectfont
+\textbf{CERTIFICATE}
+\end{center}
+\end{large}
+\vspace{0.8in}
+\doublespacing
+\noindent This is to certify that the Internship report entitled \textbf{“Applying Machine Learning/ Deep Learning techniques to Business Operations Using DevOps Assembly Lines”}”, submitted by \textbf{Yash Gupta}, student of first year towards
+partial fulfillment of the degree of Bachelor of Technology in School of Computer Science and Information Technology in year \textbf{2019-2023} Symbiosis University of Applied Sciences , Indore (M.P.) is in partial fulfillment of the requirement for the award of the degree of Bachelor of Technology and is a bonofide record of the work carried by ----, during the academic semester \textbf{second}.
+
+\vspace{1.0in}\raggedright
+Place: \textbf{LinuxWorld Informatics Pvt. Ltd., Jaipur(Rajasthan)}\\Date: \textbf{$01^{st}$ June,2020 - $25^{th}$ July,2020}\vspace{1.0in}\\ \vspace{25mm}
+\raggedright INTERNAL EXAMINER  \hspace{3.4in}EXTERNAL EXAMINER
+
+
+
+
+% Third Page Begins
+%----------------------------------------------------------------------%
+\newpage 
+\begin{large}
+\begin{center}
+\fontsize{18pt}{10pt}\selectfont
+\underline{\textbf{SYMBIOSIS UNIVERSITY OF APPLIED SCIENCES}}\\
+\vspace{5.0mm}\underline{\textbf{INDORE}}
+\end{center}
+\end{large}
+\vspace{1.0in}
+\begin{large}
+\begin{center}
+\fontsize{16pt}{10pt}\selectfont
+\textbf{RECOMMENDATION}
+\end{center}
+\end{large}
+\vspace{0.8in}
+The work entitled \textbf{“Applying Machine Learning/Deep Learning techniques to Business Operations Using DevOps Assembly Lines”}, submitted by \textbf{Yash Gupta}, student of \textbf{second} year Computer Science and Information Technology, towards the partial fulfillment for the award of degree of Bachelor of Technology in Computer Science and Information Technology of Symbiosis University of Applied Sciences Indore(M.P.) is a satisfactory account of their Internship and is recommended for the award of the degree.\\
+\vspace{1.2in}
+\begin{flushleft}
+Endorsed By:\\Dr. Sujatha R Upadhyaya\\
+Dean, SCSIT
+\end{flushleft}
+
+
+% Fourth Page Begins
+%----------------------------------------------------------------------%
+\newpage
+\begin{large}
+\begin{center}
+\fontsize{16pt}{10pt}\selectfont
+\Large{\underline{\textbf{Student Undertaking}}}
+\end{center}
+\end{large}
+\doublespacing
+I hereby undertake that the project work entitled \textbf{ “Applying Machine Learning/ Deep Learning techniques to Business Operations Using DevOps Assembly Lines”} out by me from the period to \textbf{$01^{st}$ June,2020 - $25^{th}$ July,2020} has been carried and the report so prepared is a record of work done by me during my internship. I further declare that I have completed the
+internship in accordance with the Internship policy of the University. This Project report is submitted towards fulfillment of my academic requirement and not for any other purpose.\vspace{5.0mm}\\I hereby undertake that the material of this Project is my original work and I have not copied anything from anywhere else. The material obtained from other sources has been duly acknowledged. I understand that if at any stage, it is found that I have indulged in any malpractice or the project and the project report has been copied or not completed by me, the university shall cancel my degree/withhold my result and appropriate disciplinary action shall be initiated against me.
+\doublespacing
+
+\begin{flushleft}
+\vspace{1.0in}\textbf{Student Name \& Signature}\hspace{2.8in}\textbf{Mentor Name \& Signature}
+\hspace{3.0in}\textbf{Enrollment Number: 2019BTCS088\\Name: Yash Gupta\\School Date: \textbf{$01^{st}$ June,2020 - $25^{th}$ July,2020}}\vspace{20mm}
+\begin{flushright}
+\textbf{ Head of School Name \& Signature}
+\end{flushright}
+\end{flushleft}
+
+
+% Fifth Page Begins
+%----------------------------------------------------------------------%
+\newpage 
+\begin{large}
+\begin{center}
+\fontsize{18pt}{10pt}\selectfont
+\underline{\textbf{SYMBIOSIS UNIVERSITY OF APPLIED SCIENCES}}\\
+\vspace{5.0mm}\underline{\textbf{INDORE}}
+\end{center}
+\end{large}
+\vspace{0.5in}
+\begin{large}
+\begin{center}
+\fontsize{16pt}{10pt}\selectfont
+\textbf{ACKNOWLEDGEMENT}
+\end{center}
+\end{large}
+\vspace{0.4in}
+The successful completion of any work is generally not an individual effort. It is an
+outcome of dedicated and cumulative efforts of a number of person, each having its own
+importance to the objective. This section is a value of thanks and gratitude towards all those
+persons who have implicitly or explicitly contributed in their own unique way towards the
+completion of the project. For their invaluable comments and suggestions, I wish to thank them
+all.
+
+\begin{flushleft}
+Positive inspiration and right guidance are must in every aspect of life. Especially, when
+we arrive at academic stage for instance. For the success of our project a number of obligations
+have been taken. We have performed solemn duty of expressing a heartfelt thanks to all who have
+endowed us with their precious perpetual guidance, suggestions and information. Any kind of help
+directly or indirectly has proved importance to us.
+\end{flushleft}\vspace{1.0in}
+\begin{flushright}
+\rule{150pt}{1pt}
+\end{flushright}
+
+% TOC Page Begins
+%----------------------------------------------------------------------%
+\tableofcontents
+\chapter{\underline{{INTRODUCTION}}}
+\section{Introduction to Training}
+THINK ABOUT YOUR FUTURE - As per survey, the next generation jobs would be for the ones skilled with MLOps (Data Science that Industry needs)\\
+\begin{center}
+\textbf{\Large{Machine Learning with DevOps - MLOps"}}\\
+\textbf{\textit{\large{DataScience that Industry Needs MLOps - Enterprise AI}}}
+\end{center}
+
+The \textbf{percentage of AI models} created but never put into production in large enterprises has been estimated to be as much as \textbf{90\% or more.} With massive investments in data science teams, platforms, and infrastructure, the number of AI projects is dramatically increasing — along with the number of missed opportunities.\\Unfortunately, most projects are not showing the value that business leaders expect and are introducing new risks that need to be managed.
+
+\textbf{Solution to the above problem statement is MLOps}. MLOps delivers the capabilities that \textbf{Data Science} \& \textbf{IT Ops} teams need to work together to \textbf{deploy, monitor \& manage} machine learning models in production and to govern their use in production environments.
+
+\section{Background of the company}
+\textbf{LinuxWorld ('LW')} is a fast growing ISO 9001:2008 Certified Organisation; fully governed by young and energetic Technocrats, dedicated to Open Source technologies and Linux promotion.\\
+Since its inception in the year 2005, LW have achieved the status of centre of excellence wherein there is latest technology, innovative developing methodology, state of the art infrastructure and individual needs of employees are identified and executed professionally, efficiently \& ethically.
+\begin{center}
+\textbf{ Red Hat rewarded LinuxWorld as\\
+\underline{\Large{"The Most Promising Partner"}}}
+\end{center}
+We are the \textbf{Red Hat Partner}; Today Red Hat is the world's most trusted provider of Linux and open source technology. The most recognized Linux brand in the world. Red Hat serves global enterprises through technology and services made possible by the open source model, include Red Hat Enterprise Linux operating platforms and features RHCE, the global standard Linux certification.
+
+LW is committed to nation building through extending its high end technical support services to MNC's and organisations.
+
+Academic institutions are the natural channel to introduce Linux knowledge and skills to a diverse student population. As the Linux distributor and service provider, LW continues its long-standing partnership with the education market by providing the world's only 100% hands-on Linux curriculum designed on a competency based framework that includes live- system testing measurements. Add further quality & diversity to your IT program and/or teach the most thorough, relevant and up-to- date Linux skills & certification.
+
+
+\subsection{Main activities/business organization}
+%\fontsize{18pt}{10pt}\selectfont
+\begin{enumerate}
+\item{\textbf{High end Business \& Training Services (i.e. Training \& Development Centre ):}}\\\vspace{5.0mm}
+
+LW provides training by in-house experts or certified trainers or corporate developers in areas related to System \& Network Administration, Programming Languages, Applications/Software Packages, and Server Administration etc. depending on the skills required by the customer.
+
+LW is structured around its Customers, in which customers are the focus of the organisation. Customers lie at the heart of our strategy. We encourage our customers to self-manage, identifying for themselves where their needs lie. Following are the few courses available in various areas like security, certificate courses, development, database management, etc.\\\vspace{5.0mm}
+\begin{itemize}
+\item{\textbf{Web Application Development with PHP}}\\
+\item{\textbf{RHCE, RHCSS, RHCA}}\\
+\item{\textbf{CCENT, CCNA, CCNP, CCIE and many more in the list}}
+\end{itemize}
+
+\item{\textbf{Technical Support Services:}}
+
+With a passionate technical team, fully committed to the development and progress of Open Source, LW offers its clients high end support solutions every time.
+
+\textbf{LINUXWORLD} provides support for all major Open Source applications
+\vspace{2.0mm}
+\item{\textbf{Research \& Development Centre:}}
+
+The main objective of LW R\&D's team is to work dedicate on the loopholes present in the existing Linux Operating System, to ensure that the same are removed and plug-in the new development which does not exist in Linux OS at present. In other words, it follows \textbf{Push-Pull Strategy} i.e. Pull out the loopholes and push in the new developments.\\
+Many companies' combines various software available in the communities/platforms and edits the existing ones to some extent, to give a new look to the same. As it is rightly said \textbf{"Old wine in the New bottle"} whereas LW's R\&D Centre develops its own networking tools, system monitoring tools and many other software's and LINUX related tools with their own and new ideas and not with the help of the existing ones.\\\vspace{5.0mm}
+LinuxWorld R\&D centre is developing, maintaining \& promoting its own special tools based on open source technology \& softwares. 
+\vspace{5.0mm}\\
+According to survey conducted:-
+\fontsize{18pt}{10pt}\selectfont
+\begin{center}
+\textbf{\underline{"LW is the only organisation in India having a wholly and} \vspace{2.0mm}\\\underline{solely dedicated R\&D Centre for Linux OS"}}
+\end{center}
+\end{enumerate}
+
+\subsection{Vision of Company}\vspace{10.0mm}
+\fontsize{18pt}{10pt}\selectfont
+\begin{center}
+\textbf{"To come out with the best operating system i.e. a globally acceptable product this would be different, new and useful to the entire world."}\vspace{15.0mm}\\
+\textbf{"We chase quality-quantity chases us"}\vspace{15.0mm}\\
+\textbf{"Our philosophy – be a part of the solution, not part of the problem"}
+\end{center}
+
+
+% Chapter 1 Begins
+%-----------------------------------------------------------------%
+\chapter{\underline{THE PROJECT}}
+\section{Project Definition}
+\subsection{Objective}
+\fontsize{12pt}{10pt}\selectfont
+The objective of my project is implementing ML across the enterprise successfully, including
+\begin{itemize}
+\item    Deployment and automation
+\item    Reproducibility of models and predictions
+\item    Diagnostics
+\item    Governance and regulatory compliance
+\item    Scalability
+\item    Collaboration
+\item    Business uses
+\item    Monitoring and management
+\end{itemize}
+\subsection{Project scope}
+The scope of this project is to solve real world problem with the help of mL
+contains integration of following technologies:
+\begin{enumerate}
+\item DevOps Approach
+\begin{itemize}
+\item    DevOps CI/CD pipeline to build and deploy a project
+\item    Git,Jenkins, Docker, Kubernetes (integration of all these)
+\item    Integration of CI/CD with ML/DL
+\item    Deploy ML/DL model over kubernetes
+\end{itemize}
+\item ML Stack
+\begin{itemize}
+\item Linear Regression
+\item Logistic Regression
+\item K Nearest Neighbor algorithm
+\item K-Means classifier
+\item Random Forest classifier
+\item Neural Networks (Deep Learning)
+\item Feature Extraction
+\item Feed forward neural networks (FNN)
+\item Convolutional neural networks (CNN)
+\item Recurrent Neural networks (RNN)
+\item Generative Adversal Neural Networks (GAN)
+\item Restrict Boltzman Machine (RBM)
+\item Long Short-Term Memory (LSTM)
+\item Collaborative Filtering with RBM
+\end{itemize}
+\end{enumerate}
+
+% Chapter 2 Begins
+%-----------------------------------------------------------------%
+\chapter{\underline{REQUIREMENTS ANALYSIS}}
+\section{Functional Requirements}
+These are described as a specification of behavior between inputs and outputs in our software lifecycle.
+\begin{itemize}
+\item    \textbf{Project Scaffolding:} \underline{CookieCutter, Kedro}
+\item 	 \textbf{Documentation:} \underline{Sphinx, MikteX, MD5}
+\item    \textbf{CI and Deployment:} \underline{Jenkins, Docker, Gitlab}
+\item    \textbf{Data Modelling:} \underline{DBT}
+\item    \textbf{Data Exploration and Preparation:} \underline{Pandas (Pyspark if large)}
+\item    \textbf{Testing:} \underline{Pytest}
+\item    \textbf{Feature Store:} \underline{DVC, Feast}
+\item    \textbf{Workflow engine or orchestrator:} \underline{Luigi, Prefect, Airflow}
+\item    \textbf{Model Registry:} \underline{MLFlow (using Kedro-MLFlow or PipelineX)}
+\item    \textbf{Model serving:} \underline{FastAPI, BentoML, Cortex}
+\item    \textbf{Model monitoring:} \underline{Jenkins Pipelines, Prometheus, Graphana}
+\end{itemize}
+
+
+% Chapter 3 Begins
+%-----------------------------------------------------------------%
+\chapter{\underline{DESIGN}}
+\section{Architecture Design}
+\fontsize{12pt}{10pt}\selectfont
+The Architecture Design is very crucial for any software because the design principles, architectural decisions, and their outcome, i.e., software architecture together enable a software system to deliver its’ business, operational, and technical objectives. 
+Hence, we first consider following indications for our software architecture:
+\begin{itemize}
+\item The software is easy to maintain;
+\item    Business stakeholders can understand it easily;
+\item    Good software architectures are usable over the long-term;
+\item    Such architecture patterns are flexible, adaptable, and extensible;
+\item    It should facilitate scalability;
+\item    The team can easily add features, moreover, the system performance doesn’t diminish due to this;
+\item    There is no repetition of the code;
+\item    The system can be refactored easily.
+\end{itemize}
+\newpage
+We have used the best design patterns according to our need i.e.\\
+\begin{enumerate}
+\item\textbf{\Large{Client-Server Pattern}}
+% Inserting Client Server Pattern
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.45]{Client-Server.png}
+\caption{Client-server pattern}
+\label{fig_ClientServer}
+\end{figure}
+
+\item\textbf{\Large{Master-Slave Pattern}}
+% Inserting Master Slave Architecture
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.45]{Master-Slave.png}
+\caption{Master-slave pattern}
+\label{fig_MasterSlave}
+\end{figure}
+
+\item\textbf{\Large{Pipeline-Filter Pattern}}
+% Inserting Pipe-Filter Architecture
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.45]{Pipe-filter.png}
+\caption{Pipe-Filter pattern}
+\label{fig_Pipeline}
+\end{figure}
+
+\end{enumerate}
+
+\newpage
+\subsection{Level 0: Automation}
+\fontsize{12pt}{10pt}\selectfont
+The Machine Learning model design which was traditionally used can be referred from [Figure \ref{fig_level0}]
+
+\begin{itemize}
+\item \textbf{Level 0} looks very much like a portfolio or Kaggle project.
+\item There is little automation and limited options for data storage.
+\item If we wanted to retrain out model, we’d have to repeat all these steps again. This makes dealing with model drift difficult.
+\item If we wanted to repeat this with a different data or notebook, we’d have to copy code or adapt a notebook.
+\item We need additional tools to track our experiments when creating models.
+\end{itemize}
+
+% Inserting Level 0 Architecture
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.6]{Level_0.png}
+\caption{Level 0 MLOps}
+\label{fig_level0}
+\end{figure}
+
+
+
+
+
+\newpage
+\subsection{Level 1: High Automation}
+\fontsize{12pt}{10pt}\selectfont
+The Machine Learning model design we are using can be referred as \textbf{Level 1: Automation} [Figure \ref{fig_level1}]
+
+% Inserting Level 1 Architecture
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.6]{Level_1.png}
+\caption{High Automation MLops}
+\label{fig_level1}
+\end{figure}
+
+\begin{itemize}
+\item The first new item here is a \textbf{feature store}. This is a database specifically for ML features. We do a variety of operations when training models such as scaling, feature engineering, encoding and mathematical transformations. Many of these features are not useful for typical analysis so a feature store allows us to store this and access it more easily.
+\item On the left side, we have \textbf{orchestrated} experiments. This is the concept of automation many operations in the Data Science work flow.
+\item The red square in the bottom left is the creation of a \textbf{pipeline}. This is another automation. When we deploy as pipeline, we are deploying the model and the transformations required to generate predictions from the model.
+\item Many validation steps can also be \textbf{automated}.
+\item We also allow \textbf{continuous monitoring and retraining} by collecting new data and storing it in the feature store.
+\end{itemize}
+
+\section{Sequence Diagrams}
+\fontsize{12pt}{10pt}\selectfont
+Below figure [Figure \ref{fig_Sequence_Diag}] represents the workflow of how software works.
+
+
+% Inserting Sequence Diagram
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.6]{Sequence_Diag.png}
+\caption{Sequence Diagram}
+\label{fig_Sequence_Diag}
+\end{figure}
+
+% Chapter 5 Begins
+%-----------------------------------------------------------------%
+\chapter{\underline{MONITORING AND TESTING}}
+\section{Test cases developed}
+\fontsize{12pt}{10pt}\selectfont
+The complete development pipeline includes three essential components, data pipeline, ML model pipeline, and application pipeline. In accordance with this separation we distinguish three scopes for testing in ML systems: tests for features and data, tests for model development, and tests for ML infrastructure.[Figure \ref{fig_TestingCycle}]\\
+\Large{\textbf{Features and Data Tests}}\\
+\fontsize{12pt}{10pt}\selectfont
+\begin{itemize}
+\item\textbf{Data validation:} Automatic check for data and features schema/domain.
+        Action: In order to build a schema (domain values), calculate statistics from the training data. This schema can be used as expectation definition or semantic role for input data during training and serving stages.
+\item Features importance test to understand whether new features add a predictive power.
+\begin{enumerate}
+
+      	\item Action: Compute correlation coefficient on features columns.
+        \item Action: Train model with one or two features.
+        \item Action: Use the subset of features “One of k left out and train a set of different models.
+        \item Measure data dependencies, inference latency, and RAM usage for each new feature. Compare it with the predictive power of the newly added features.
+        \item Drop out unused/deprecated features from your infrastructure and document it.
+
+    \item Features and data pipelines should be policy-compliant (e.g. GDPR). These requirements should be programmatically checked in both development and production environments.
+    \item Feature creation code should be tested by unit tests (to capture bugs in features).
+\end{enumerate}
+\end{itemize}
+\newpage
+\section{Testing used in our project}
+
+% Inserting Master Slave Architecture
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.6]{Testing-Cycle.png}
+\caption{Extensive Testing \& Monitoring}
+\label{fig_TestingCycle}
+\end{figure}
+
+
+% Chapter 6 Begins
+%-----------------------------------------------------------------%
+\chapter{\underline{WEEKLY DAIRY}}\vspace{-15.0mm}
+\section{Record of tasks completion during the internship}
+% In Tabular manner
+\begin{table}[ht]
+\centering
+\scalebox{1.2}{
+\begin{tabular}{|c|c|}
+\hline \textbf{Week} & \textbf{Tasks}\\ \hline
+$1^{st}$ & Machine Learning\\\hline
+$2^{nd}$ & Deep Learning\\\hline
+$3^{rd}$ & DevOps- What, Why, When \& Where?\\\hline
+$4^{th}$ & Containerization - Intro \& Implementation\\\hline
+$5^{th}$ & Data Science using Python\\\hline
+$6^{th}$ & RHCSA with (RHEL\_v8)-Linux O.S\\\hline
+$7^{th}$ & Integration of CI/CD with ML/DL\\\hline
+$8^{th}$ & Project Presentation\\\hline
+\end{tabular}
+}
+\end{table}
+
+% Chapter 7 Begins
+%-----------------------------------------------------------------%
+\chapter{\underline{CONCLUSION}\\\large{(Anticipatory approach)}}
+In this project, we looked at developing an MLOps framework. The great thing about this is that we can plug tools into this framework as we find suitable tools. It also really helps with assessing new tools, as we can understand how they fit into our framework and any existing tooling. \vspace{5.0mm}
+
+Over the next few months, I plan to put this into practice. I’m going to try out new tools, link them together and try to get a genuine MLOps environment on my home workstation. If you have experience with any of the tools mentioned in this, leave a comment!
+\section{Problems and Issues in currents system}
+\large{\textbf{Problems}}
+\fontsize{12pt}{10pt}\selectfont
+\begin{itemize}
+\item Currently, no Major security tools are integrated with the DevOps Pipeline.
+\item Currently, Some processess are manual so we need to do automated those processes.
+\end{itemize}
+\large{\textbf{Issues}}
+\fontsize{12pt}{10pt}\selectfont
+\begin{itemize}
+\item Currently, the Infrastructure for production environment is not configured using via (IAC) approach which results in \textbf{More Time Consumption}
+\item Currently, No seperate \textbf{Testing environment} is created. 
+\end{itemize}
+\section{Future extension}
+\fontsize{12pt}{10pt}\selectfont
+Future extension will contain following things at the core for an efficient \& highly secured software architecture i.e.
+\begin{itemize}
+\item Easy \textbf{Intersectionality} with least coupling.
+\item Easy \textbf{Multifunctionality} 
+\item Best \textbf{Cost Optimization} of different cloud providers.
+\item Implementing different strategies for \textbf{High Scalability \& High Availability}.
+\item Develop mobile application for controlling infrastructure.
+\end{itemize}
+
+\end{document}
