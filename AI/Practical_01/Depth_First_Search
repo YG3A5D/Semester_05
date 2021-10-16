@@ -1,0 +1,78 @@
+/*
+Artificial_Intelligence_Practical_Lab_01
+Topic: Depth_First_Search_using_Inorder_Traversal
+Author: 2019BTCS088 
+*/
+
+// Importing necessary header files 
+// C program for different tree traversals
+#include <stdio.h>
+#include <stdlib.h>
+ 
+
+
+// Creating a struct for pointer
+
+struct node {
+    char data;
+    struct node* left;  // Creating pointer for left child
+    struct node* right; // Creating pointer for right child
+};
+
+
+struct node* newNode(char data)
+{
+    struct node* node = (struct node*)
+        malloc(sizeof(struct node));
+    node->data = data;                  // Declaration for Root Node
+    node->left = NULL;                  // Declaration for Left Node
+    node->right = NULL;                 // Declaration for Right Node
+ 
+    return (node);
+}
+
+
+/* 
+    Provided Binary Tree:    Given tree structure
+                                A           -->  Root_Node
+                              /   \
+                            B      C
+                          /  \    /  \ 
+                        D    E   F    G
+*/ 
+    
+    
+void printInorder(struct node* node)
+{
+    if (node == NULL)   // If Root node is Absent
+        return;
+ 
+    /* first recur on left child */
+    printf("%c ", node->data);
+    
+   
+    /* then print the data of node */
+    printInorder(node->left);
+ 
+    /* now recur on right child */
+    printInorder(node->right);
+}
+
+// main() for implementing Binary tree
+int main()
+{
+    struct node* root = newNode('A');
+    root->left = newNode('B');
+    root->right = newNode('C');
+    root->left->left = newNode('D');
+    root->left->right = newNode('E');
+    root->right->left = newNode('F');
+    root->right->right = newNode('G');
+    
+    printf("\nInorder traversal of binary tree is \n");
+    printInorder(root);
+ 
+    getchar();
+    return 0;
+    
+}
