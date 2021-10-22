@@ -301,16 +301,14 @@ contains integration of following technologies:
 \section{Functional Requirements}
 These are described as a specification of behavior between inputs and outputs in our software lifecycle.
 \begin{itemize}
-\item    \textbf{Project Scaffolding:} \underline{CookieCutter, Kedro}
-\item 	 \textbf{Documentation:} \underline{Sphinx, MikteX, MD5}
+\item 	 \textbf{Documentation:} \underline{MikteX}
 \item    \textbf{CI and Deployment:} \underline{Jenkins, Docker, Gitlab}
 \item    \textbf{Data Modelling:} \underline{DBT}
-\item    \textbf{Data Exploration and Preparation:} \underline{Pandas (Pyspark if large)}
+\item    \textbf{Data Exploration and Preparation:} \underline{Pandas (Apache Pyspark if large)}
 \item    \textbf{Testing:} \underline{Pytest}
-\item    \textbf{Feature Store:} \underline{DVC, Feast}
 \item    \textbf{Workflow engine or orchestrator:} \underline{Luigi, Prefect, Airflow}
 \item    \textbf{Model Registry:} \underline{MLFlow (using Kedro-MLFlow or PipelineX)}
-\item    \textbf{Model serving:} \underline{FastAPI, BentoML, Cortex}
+\item    \textbf{Model serving:} \underline{FastAPI}
 \item    \textbf{Model monitoring:} \underline{Jenkins Pipelines, Prometheus, Graphana}
 \end{itemize}
 
@@ -432,14 +430,13 @@ The complete development pipeline includes three essential components, data pipe
 \Large{\textbf{Features and Data Tests}}\\
 \fontsize{12pt}{10pt}\selectfont
 \begin{itemize}
-\item\textbf{Data validation:} Automatic check for data and features schema/domain.
-        Action: In order to build a schema (domain values), calculate statistics from the training data. This schema can be used as expectation definition or semantic role for input data during training and serving stages.
+\item\textbf{Data validation:} Automatic check for data and features schema/domain. In order to build a schema (domain values), calculate statistics from the training data. This schema can be used as expectation definition or semantic role for input data during training and serving stages.
 \item Features importance test to understand whether new features add a predictive power.
 \begin{enumerate}
 
-      	\item Action: Compute correlation coefficient on features columns.
-        \item Action: Train model with one or two features.
-        \item Action: Use the subset of features “One of k left out and train a set of different models.
+      	\item Compute correlation coefficient on features columns.
+        \item Train model with one or two features.
+        \item Use the subset of features “One of k left out and train a set of different models.
         \item Measure data dependencies, inference latency, and RAM usage for each new feature. Compare it with the predictive power of the newly added features.
         \item Drop out unused/deprecated features from your infrastructure and document it.
 
@@ -484,9 +481,9 @@ $8^{th}$ & Project Presentation\\\hline
 % Chapter 7 Begins
 %-----------------------------------------------------------------%
 \chapter{\underline{CONCLUSION}\\\large{(Anticipatory approach)}}
-In this project, we looked at developing an MLOps framework. The great thing about this is that we can plug tools into this framework as we find suitable tools. It also really helps with assessing new tools, as we can understand how they fit into our framework and any existing tooling. \vspace{5.0mm}
+In this project, we looked at developing an MLOps framework/platform. The great thing about this is that we can plug tools into this framework and customise the machine learning environment as per problem statement. It also really helps with assessing new tools, as we can understand how they fit into our framework and any existing tooling. \vspace{5.0mm}
 
-Over the next few months, I plan to put this into practice. I’m going to try out new tools, link them together and try to get a genuine MLOps environment on my home workstation. If you have experience with any of the tools mentioned in this, leave a comment!
+Over the next few months, I plan to put my project into \textbf{Github for contributing to Open Source}. Also, I’m going to try out new \textbf{Reinforcement learning} algorithms, \& add it as module link them together and try to get a genuine own MLOps environment on my home workstation. 
 \section{Problems and Issues in currents system}
 \large{\textbf{Problems}}
 \fontsize{12pt}{10pt}\selectfont
