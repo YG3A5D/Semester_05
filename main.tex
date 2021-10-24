@@ -182,15 +182,11 @@ directly or indirectly has proved importance to us.
 \tableofcontents
 \chapter{\underline{{INTRODUCTION}}}
 \section{Introduction to Training}
-THINK ABOUT YOUR FUTURE - As per survey, the next generation jobs would be for the ones skilled with MLOps (Data Science that Industry needs)\\
+\textbf{\large{THINK ABOUT YOUR FUTURE }}- As per survey, the next generation jobs would be for the ones skilled with MLOps (Data Science that Industry needs)\\
 \begin{center}
 \textbf{\Large{Machine Learning with DevOps - MLOps"}}\\
 \textbf{\textit{\large{DataScience that Industry Needs MLOps - Enterprise AI}}}
 \end{center}
-
-The \textbf{percentage of AI models} created but never put into production in large enterprises has been estimated to be as much as \textbf{90\% or more.} With massive investments in data science teams, platforms, and infrastructure, the number of AI projects is dramatically increasing — along with the number of missed opportunities.\\Unfortunately, most projects are not showing the value that business leaders expect and are introducing new risks that need to be managed.
-
-\textbf{Solution to the above problem statement is MLOps}. MLOps delivers the capabilities that \textbf{Data Science} \& \textbf{IT Ops} teams need to work together to \textbf{deploy, monitor \& manage} machine learning models in production and to govern their use in production environments.
 
 \section{Background of the company}
 \textbf{LinuxWorld ('LW')} is a fast growing ISO 9001:2008 Certified Organisation; fully governed by young and energetic Technocrats, dedicated to Open Source technologies and Linux promotion.\\
@@ -203,7 +199,7 @@ We are the \textbf{Red Hat Partner}; Today Red Hat is the world's most trusted p
 
 LW is committed to nation building through extending its high end technical support services to MNC's and organisations.
 
-Academic institutions are the natural channel to introduce Linux knowledge and skills to a diverse student population. As the Linux distributor and service provider, LW continues its long-standing partnership with the education market by providing the world's only 100% hands-on Linux curriculum designed on a competency based framework that includes live- system testing measurements. Add further quality & diversity to your IT program and/or teach the most thorough, relevant and up-to- date Linux skills & certification.
+Academic institutions are the natural channel to introduce Linux knowledge and skills to a diverse student population. As the Linux distributor and service provider, LW continues its long-standing partnership with the education market by providing the world's only \textbf{100\% hands-on Linux curriculum} designed on a competency based framework that includes live- system testing measurements. Add further quality \& diversity to your IT program and/or teach the most thorough, relevant and up-to-date Linux skills \& certification.
 
 
 \subsection{Main activities/business organization}
@@ -222,9 +218,7 @@ LW is structured around its Customers, in which customers are the focus of the o
 
 \item{\textbf{Technical Support Services:}}
 
-With a passionate technical team, fully committed to the development and progress of Open Source, LW offers its clients high end support solutions every time.
-
-\textbf{LINUXWORLD} provides support for all major Open Source applications
+With a passionate technical team, fully committed to the development and progress of Open Source, LW offers its clients high end support solutions every time. \textbf{LINUXWORLD} provides support for all major Open Source applications.
 \vspace{2.0mm}
 \item{\textbf{Research \& Development Centre:}}
 
@@ -251,7 +245,12 @@ According to survey conducted:-
 % Chapter 1 Begins
 %-----------------------------------------------------------------%
 \chapter{\underline{THE PROJECT}}
-\section{Project Definition}
+\section{Problem Definition}
+\fontsize{12pt}{10pt}\selectfont
+\vspace{5.0mm}
+The \textbf{percentage of AI models} created but never put into production in large enterprises has been estimated to be as much as \textbf{90\% or more.} With massive investments in data science teams, platforms, and infrastructure, the number of AI projects is dramatically increasing — along with the number of missed opportunities.\\Unfortunately, most projects are not showing the value that business leaders expect and are introducing new risks that need to be managed.
+\vspace{5.0mm}
+\textbf{Solution to the above problem statement is MLOps}. MLOps delivers the capabilities that \textbf{Data Science} \& \textbf{IT Ops} teams need to work together to \textbf{deploy, monitor \& manage} machine learning models in production and to govern their use in production environments.
 \subsection{Objective}
 \fontsize{12pt}{10pt}\selectfont
 The objective of my project is implementing ML across the enterprise successfully, including
@@ -266,12 +265,11 @@ The objective of my project is implementing ML across the enterprise successfull
 \item    Monitoring and management
 \end{itemize}
 \subsection{Project scope}
-The scope of this project is to solve real world problem with the help of mL
-contains integration of following technologies:
+The scope of this project is to solve real world problem with the help of ML that contains integration of following technologies:
 \begin{enumerate}
 \item DevOps Approach
 \begin{itemize}
-\item    DevOps CI/CD pipeline to build and deploy a project
+\item    DevOps CI/CD pipeline to build and deploy a project.
 \item    Git,Jenkins, Docker, Kubernetes (integration of all these)
 \item    Integration of CI/CD with ML/DL
 \item    Deploy ML/DL model over kubernetes
@@ -295,6 +293,50 @@ contains integration of following technologies:
 \end{itemize}
 \end{enumerate}
 
+\newpage
+\subsection{Practical Implementation}
+\begin{itemize}
+\item \textbf{Dockerfile}
+
+% Inserting Dockerfile 
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.25]{Dockerfile.png}
+\caption{\textbf{Dockerfile}}
+\label{fig_Dockerfile}
+\end{figure}
+%\newpage
+\item \textbf{Kubernetes Deployment file}
+
+% Inserting  K8s deployment file
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.25]{k8s_Deployment.png}
+\caption{\textbf{deployment.yaml}}
+\label{fig_k8s_deployment_file}
+\end{figure}
+\newpage
+\item \textbf{Kubernetes Service.yaml}
+
+% Inserting  K8s service file
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.3]{k8s_Service.png}
+\caption{\textbf{service.yaml}}
+\label{fig_k8s_service_file}
+\end{figure}
+
+\item \textbf{Ansible playbook }
+
+% Inserting  Ansible playbook
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.3]{Ansible_playbook.png}
+\caption{\textbf{playbook.yaml}}
+\label{fig_ansible_playbook_file}
+\end{figure}
+\end{itemize}
+
 % Chapter 2 Begins
 %-----------------------------------------------------------------%
 \chapter{\underline{REQUIREMENTS ANALYSIS}}
@@ -307,6 +349,7 @@ These are described as a specification of behavior between inputs and outputs in
 \item    \textbf{Data Exploration and Preparation:} \underline{Pandas (Apache Pyspark if large)}
 \item    \textbf{Testing:} \underline{Pytest}
 \item    \textbf{Workflow engine or orchestrator:} \underline{Luigi, Prefect, Airflow}
+\item 	\textbf{Feature Store:} \underline{DVC}
 \item    \textbf{Model Registry:} \underline{MLFlow (using Kedro-MLFlow or PipelineX)}
 \item    \textbf{Model serving:} \underline{FastAPI}
 \item    \textbf{Model monitoring:} \underline{Jenkins Pipelines, Prometheus, Graphana}
@@ -424,9 +467,48 @@ Below figure [Figure \ref{fig_Sequence_Diag}] represents the workflow of how sof
 % Chapter 5 Begins
 %-----------------------------------------------------------------%
 \chapter{\underline{MONITORING AND TESTING}}
-\section{Test cases developed}
+\section{MONITORING:}
+\fontsize{12pt}{10pt}\selectfont
+\vspace{5.0mm} Monitoring refers to closely tracking the performance of ML models in production. The tracking and monitoring help AI teams in identifying potential issues beforehand and mitigate downtime. Over time, monitoring platforms have continued to gain popularity.
+
+\subsection{Why we need Monitoring?}
+\fontsize{12pt}{10pt}\selectfont
+\begin{center}
+\textbf{\textit{\large{“By failing to prepare, you are preparing to fail”\\}}}
+\end{center}
+\begin{itemize}
+\item How do you know \textbf{if your models are behaving as you expect them to}? 
+\item What about \textbf{next week/month/year} when the customer (or fraudster) behavior changes and your training data is stale?
+\item How to handle \textbf{Data Skews, Model Staleness, Negative Feedback Loops?}
+\end{itemize}
+To solve these problems in a very practical approach we have to do \textbf{Monitoring} of our \textbf{ML model}.
+
+\subsection{How we performed Monitoring of our ML model?}
+\fontsize{12pt}{10pt}\selectfont
+One of the most popular open-source stacks for monitoring metrics is the \textbf{combination of Prometheus and Grafana.}[Figure \ref{fig_MonitoringCycle}]\\
+\textbf{Prometheus} is a monitoring solution for storing time series data like metrics. \textbf{Grafana} allows to visualize the data stored in Prometheus (and other sources).\\ 
+\newpage
+\begin{center}
+\textbf{\textit{\Large{Prometheus \& Grafana as "Jai \& Veeru" of Monitoring World!!}}}
+\end{center}
+Prometheus scrapes metrics from instrumented jobs, either directly or via an intermediary push gateway for short-lived jobs. It stores all scraped samples locally and runs rules over this data to either aggregate and record new time series from existing data or generate alerts. Grafana or other API consumers can be used to visualize the collected data.
+
+% Extensive Monitoring via Prometheus & Grafana
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.6]{Prometheus-Grafana.png}
+\caption{Extensive Monitoring via Prometheus \& Grafana}
+\label{fig_MonitoringCycle}
+\end{figure}
+
+\section{TESTING}
+\fontsize{12pt}{10pt}\selectfont
+\vspace{5.0mm}
+This kind of ML testing is more similar to traditional testing: you write and run tests checking the performance of the program. Applying the tests, you catch bugs in different components of the ML program.
+\subsection{Test cases developed}
 \fontsize{12pt}{10pt}\selectfont
 The complete development pipeline includes three essential components, data pipeline, ML model pipeline, and application pipeline. In accordance with this separation we distinguish three scopes for testing in ML systems: tests for features and data, tests for model development, and tests for ML infrastructure.[Figure \ref{fig_TestingCycle}]\\
+\newpage
 \Large{\textbf{Features and Data Tests}}\\
 \fontsize{12pt}{10pt}\selectfont
 \begin{itemize}
@@ -444,14 +526,14 @@ The complete development pipeline includes three essential components, data pipe
     \item Feature creation code should be tested by unit tests (to capture bugs in features).
 \end{enumerate}
 \end{itemize}
-\newpage
-\section{Testing used in our project}
+%\newpage
+\subsection{Testing used in our project}
 
-% Inserting Master Slave Architecture
+% Extensive Testing & Monitoring
 \begin{figure}[h]
 \centering
 \includegraphics[scale=0.6]{Testing-Cycle.png}
-\caption{Extensive Testing \& Monitoring}
+\caption{Extensive Testing }
 \label{fig_TestingCycle}
 \end{figure}
 
@@ -488,7 +570,7 @@ Over the next few months, I plan to put my project into \textbf{Github for contr
 \large{\textbf{Problems}}
 \fontsize{12pt}{10pt}\selectfont
 \begin{itemize}
-\item Currently, no Major security tools are integrated with the DevOps Pipeline.
+\item Currently, no Major security tools are integrated with the DevOps Pipeline such as .
 \item Currently, Some processess are manual so we need to do automated those processes.
 \end{itemize}
 \large{\textbf{Issues}}
@@ -497,6 +579,8 @@ Over the next few months, I plan to put my project into \textbf{Github for contr
 \item Currently, the Infrastructure for production environment is not configured using via (IAC) approach which results in \textbf{More Time Consumption}
 \item Currently, No seperate \textbf{Testing environment} is created. 
 \end{itemize}
+
+\newpage
 \section{Future extension}
 \fontsize{12pt}{10pt}\selectfont
 Future extension will contain following things at the core for an efficient \& highly secured software architecture i.e.
@@ -505,7 +589,34 @@ Future extension will contain following things at the core for an efficient \& h
 \item Easy \textbf{Multifunctionality} 
 \item Best \textbf{Cost Optimization} of different cloud providers.
 \item Implementing different strategies for \textbf{High Scalability \& High Availability}.
-\item Develop mobile application for controlling infrastructure.
-\end{itemize}
+\item Adding more ML algorithms in modules for better \textbf{GUI features}.
+\item Develop mobile application for controlling entire infrastructure for each team.
+\end{itemize} 
 
+
+
+\begin{thebibliography}{100}  % 100 is a random guess of the total number of 
+%references 
+ 
+\bibitem{Boney96} https://www.github.com/YG3A5D, \textbf{\emph{https://www.github.com/YG3A5D/MLOps\_Project}}
+ 
+\bibitem{MG}  Christian Schenk, \textbf{\emph{LaTeX Compiler https://miktex.org/download}}
+ 
+\bibitem{Numpy} Sebastian Berg,Ralf Gommers, Charles Harris, Stephan Hoyer, Melissa Weber  Mendonça,Inessa Pawson, Matti Picus, Stéfan van der Walt, Eric Wieser, \textbf{ \emph{https://numpy.org/docs}} 
+
+\bibitem{Pandas} Pandas Open-source Community, \textbf{ \emph{https://pandas.pydata.org/docs}} 
+ 
+\bibitem{Kubernetes} Cloud Native Computing Foundation, \textbf{ \emph{https://kubernetes.io/docs}} 
+ 
+\bibitem{Docker} Solomon Hykes, Docker Inc., \textbf{\emph{https://www.docker.com/docs}}
+ 
+ \bibitem{Jenkins} Kohsuke Kawaguchi, Jenkins Open-source community., \textbf{\emph{https://www.jenkins.io/docs}}
+
+ \bibitem{Ansible} Michael DeHaan, Open-source community, \textbf{\emph{https://www.ansible.com/docs}}
+ 
+\end{thebibliography}
+%\begin{itemize}
+%\item  https://www.github.com[]
+%
+%\end{itemize}
 \end{document}
