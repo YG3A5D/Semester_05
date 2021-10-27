@@ -1,0 +1,46 @@
+#include <stdio.h>
+#include <iostream>
+#include <fstream>
+using namespace std;
+
+int main(){
+   FILE *fp;
+   //fp = fopen("123.txt", "r");//opening file
+   //fprintf(fp, "Hello, Yash Gupta\n");//writing data into file
+   //fclose(fp);//closing file
+    //int file_size = fp.tellg();
+    //cout<<"Size of file is "<<file_size;
+    //for (int i = 0 ; i <= len(getc()))
+   /*while(123){
+    char mychar = 123.getc();
+    cout<<mychar;
+    }*/
+        //int i;
+        //FILE * fptr;
+        //char fn[50];
+        //char str[] = "Yash Gupta\n";
+        //fptr = fopen("123.txt", "w"); // "w" defines "writing mode"
+        //for (i = 0; str[i] != '\n'; i++) {
+            /* write to file using fputc() function */
+         //   fputc(str[i], fptr);
+        //}
+        //fclose(fptr);
+        //return 0;
+        int num;
+        ifstream in_file("a.txt", ios::binary);
+        in_file.seekg(0, ios::end);
+        int file_size = in_file.tellg();
+        cout<<"Size of the file is"<<" "<< file_size << " "<< "bytes";
+        in_file >> num;
+            while (!in_file.eof()) {
+                cout<< "The number is:" << num ;
+                in_file >> num;
+            }
+
+        //for(int i = 0 ; i <= file_size ; i++){
+          //  if(str[i])
+        //}
+    }
+
+
+
