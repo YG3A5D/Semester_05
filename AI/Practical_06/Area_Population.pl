@@ -16,4 +16,4 @@ area('Pakistan',2).
 
 density(X,Y):-population(X,Pop),
               area(X,Ar),
-	            Y is Pop/Ar.
+	      Y is Pop/Ar.
