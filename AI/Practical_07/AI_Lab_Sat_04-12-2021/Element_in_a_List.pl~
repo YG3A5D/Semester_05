@@ -1,0 +1,6 @@
+/*Check whether a given element*/
+
+/*RULES*/
+member(X,[X|_]).
+member(,[_|Y]):-
+	member(X,Y).
