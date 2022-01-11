@@ -1,5 +1,3 @@
-// Java program to illustrate Affine Cipher
-
 class GFG
 {
 
