@@ -8,8 +8,6 @@
 	android:background="#7AA4A8"
 	tools:context=".MainActivity">
 
-	<!-- This text view is used to show the
-		output of encrypted or decrypted message -->
 	<TextView
 		android:id="@+id/tV1"
 		android:layout_width="0dp"
@@ -28,9 +26,6 @@
 		app:layout_constraintHorizontal_bias="0.0"
 		app:layout_constraintStart_toStartOf="parent"
 		app:layout_constraintTop_toBottomOf="@+id/tV2" />
-
-	<!-- This text view is used to show
-		the text "Caesar Cipher AAlgorithm" -->
 	<TextView
 		android:id="@+id/tV2"
 		android:layout_width="wrap_content"
@@ -45,9 +40,6 @@
 		app:layout_constraintEnd_toEndOf="parent"
 		app:layout_constraintStart_toStartOf="parent"
 		app:layout_constraintTop_toTopOf="parent" />
-
-	<!-- Button to perform the operations
-		to encrypt the message-->
 	<Button
 		android:id="@+id/btnencrypt"
 		android:layout_width="0dp"
@@ -63,9 +55,6 @@
 		app:layout_constraintBaseline_toBaselineOf="@+id/btndecrypt"
 		app:layout_constraintEnd_toStartOf="@+id/btndecrypt"
 		app:layout_constraintStart_toStartOf="parent" />
-
-	<!-- Button to perform the operations
-		to decrypt the message-->
 	<Button
 		android:id="@+id/btndecrypt"
 		android:layout_width="165dp"
@@ -83,9 +72,6 @@
 		app:layout_constraintEnd_toEndOf="parent"
 		app:layout_constraintStart_toEndOf="@+id/btnencrypt"
 		app:layout_constraintTop_toBottomOf="@+id/key_dt" />
-
-	<!-- Edit text to take input of message
-		which user want to encrypt-->
 	<EditText
 		android:id="@+id/inputMessage"
 		android:layout_width="0dp"
@@ -99,9 +85,6 @@
 		app:layout_constraintHorizontal_bias="0.0"
 		app:layout_constraintStart_toStartOf="parent"
 		app:layout_constraintTop_toBottomOf="@+id/tV2" />
-
-	<!-- Edit text to take input of ciphertext
-		using which encryption will be done -->
 	<EditText
 		android:id="@+id/ciphEdt"
 		android:layout_width="356dp"
@@ -115,9 +98,6 @@
 		app:layout_constraintEnd_toEndOf="parent"
 		app:layout_constraintStart_toStartOf="parent"
 		app:layout_constraintTop_toBottomOf="@+id/inputMessage" />
-
-	<!-- Edit text to take input of key using
-		which message will be decrypted -->
 	<EditText
 		android:id="@+id/key_dt"
 		android:layout_width="356dp"
