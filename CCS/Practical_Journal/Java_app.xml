@@ -1,115 +1,81 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-	xmlns:android="http://schemas.android.com/apk/res/android"
-	xmlns:app="http://schemas.android.com/apk/res-auto"
-	xmlns:tools="http://schemas.android.com/tools"
-	android:layout_width="match_parent"
-	android:layout_height="match_parent"
-	android:background="#7AA4A8"
-	tools:context=".MainActivity">
+public class utility {
 
-	<TextView
-		android:id="@+id/tV1"
-		android:layout_width="0dp"
-		android:layout_height="200dp"
-		android:layout_marginStart="27dp"
-		android:layout_marginEnd="27dp"
-		android:layout_marginBottom="25dp"
-		android:background="#A8BDD1"
-		android:gravity="center_vertical|center_horizontal"
-		android:hint="Enter Your Text"
-		android:padding="20dp"
-		android:textColor="@color/black"
-		android:textSize="40sp"
-		app:layout_constraintBottom_toTopOf="@id/inputMessage"
-		app:layout_constraintEnd_toEndOf="parent"
-		app:layout_constraintHorizontal_bias="0.0"
-		app:layout_constraintStart_toStartOf="parent"
-		app:layout_constraintTop_toBottomOf="@+id/tV2" />
-	<TextView
-		android:id="@+id/tV2"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:layout_marginTop="42dp"
-		android:layout_marginBottom="36dp"
-		android:text="Caesar Cipher Algorithm"
-		android:textColor="#070000"
-		android:textSize="28sp"
-		android:textStyle="bold"
-		app:layout_constraintBottom_toTopOf="@id/tV1"
-		app:layout_constraintEnd_toEndOf="parent"
-		app:layout_constraintStart_toStartOf="parent"
-		app:layout_constraintTop_toTopOf="parent" />
-	<Button
-		android:id="@+id/btnencrypt"
-		android:layout_width="0dp"
-		android:layout_height="50dp"
-		android:layout_marginStart="30dp"
-		android:layout_marginEnd="30dp"
-		android:background="#000000"
-		android:text="Encrypt"
-		android:textColor="#390F0F"
-		android:textSize="18sp"
-		android:textStyle="bold"
-		app:backgroundTint="#A8BDD1"
-		app:layout_constraintBaseline_toBaselineOf="@+id/btndecrypt"
-		app:layout_constraintEnd_toStartOf="@+id/btndecrypt"
-		app:layout_constraintStart_toStartOf="parent" />
-	<Button
-		android:id="@+id/btndecrypt"
-		android:layout_width="165dp"
-		android:layout_height="49dp"
-		android:layout_marginEnd="31dp"
-		android:layout_marginRight="31dp"
-		android:layout_marginBottom="90dp"
-		android:background="@color/black"
-		android:text="Decrypt"
-		android:textColor="#421414"
-		android:textSize="18sp"
-		android:textStyle="bold"
-		app:backgroundTint="#A8BDD1"
-		app:layout_constraintBottom_toBottomOf="parent"
-		app:layout_constraintEnd_toEndOf="parent"
-		app:layout_constraintStart_toEndOf="@+id/btnencrypt"
-		app:layout_constraintTop_toBottomOf="@+id/key_dt" />
-	<EditText
-		android:id="@+id/inputMessage"
-		android:layout_width="0dp"
-		android:layout_height="50dp"
-		android:layout_marginStart="32dp"
-		android:layout_marginEnd="32dp"
-		android:hint="Your Message"
-		android:textColor="@color/black"
-		app:layout_constraintBottom_toTopOf="@+id/ciphEdt"
-		app:layout_constraintEnd_toEndOf="parent"
-		app:layout_constraintHorizontal_bias="0.0"
-		app:layout_constraintStart_toStartOf="parent"
-		app:layout_constraintTop_toBottomOf="@+id/tV2" />
-	<EditText
-		android:id="@+id/ciphEdt"
-		android:layout_width="356dp"
-		android:layout_height="50dp"
-		android:layout_marginStart="29dp"
-		android:layout_marginEnd="29dp"
-		android:layout_marginBottom="17dp"
-		android:hint="Cipher Text"
-		android:textColor="@color/black"
-		app:layout_constraintBottom_toTopOf="@+id/key_dt"
-		app:layout_constraintEnd_toEndOf="parent"
-		app:layout_constraintStart_toStartOf="parent"
-		app:layout_constraintTop_toBottomOf="@+id/inputMessage" />
-	<EditText
-		android:id="@+id/key_dt"
-		android:layout_width="356dp"
-		android:layout_height="50dp"
-		android:layout_marginStart="29dp"
-		android:layout_marginEnd="29dp"
-		android:layout_marginBottom="21dp"
-		android:hint="Key"
-		android:textColor="@color/black"
-		app:layout_constraintBottom_toTopOf="@+id/btndecrypt"
-		app:layout_constraintEnd_toEndOf="parent"
-		app:layout_constraintStart_toStartOf="parent"
-		app:layout_constraintTop_toBottomOf="@+id/ciphEdt" />
+	// Declaration of all the required variables
+	private static String alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	private static int index;
+	private static int updated_index;
+	private static int final_index;
+	private static int index_p_t_l;
+	private static int index_s_t_l;
+	private static String plainTxt;
+	private static String cipherTxt;
+	private static String finalTxt;
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+	// code for encryption
+	public static String encrypt1(String plaintext, int encrptionKey) {
+		reset();
+		// plaintext is converted to uppercase
+		// so that it is easy to convert according
+		// to Caesar Cipher algorithm
+		plaintext = plaintext.toUpperCase();
+		// using a for loop the use index and
+		// change text with help of it
+		for (index = 0; index < plaintext.length(); index++) {
+			// checking the condition for plaintext to be
+			// null at some character position
+			if (plaintext.charAt(index) != ' ') {
+				index_p_t_l = alphabet.indexOf(plaintext.charAt(index));
+				// index is being updated
+				// so that next and final index
+				// be used for ciphertext
+				updated_index = encrptionKey + alphabet.indexOf(plaintext.charAt(index));
+				if (updated_index >= alphabet.length()) {
+					final_index = updated_index - alphabet.length();
+				} else
+					final_index = updated_index;
+				// substring is used so that every character
+				// can be separately converted to ciphertext
+				cipherTxt = alphabet.substring(final_index, final_index + 1);
+				finalTxt = finalTxt + cipherTxt;
+			}
+		}
+		// returning the
+		// final changed text
+		return finalTxt;
+	}
+
+	// code for decryption
+	public static String decrypt1(String ciphertext, int decryptionKey) {
+		reset();
+		ciphertext = ciphertext.toUpperCase();
+		// using a for loop the use index and
+		// change text with help of it
+		for (index = 0; index < ciphertext.length(); index++) {
+			if (ciphertext.charAt(index) != ' ') {
+				index_p_t_l = alphabet.indexOf(ciphertext.charAt(index));
+				index_s_t_l = index_p_t_l;
+				// index is updated with help of decryption
+				// key which we provided as input
+				updated_index = alphabet.indexOf(ciphertext.charAt(index)) - decryptionKey;
+				if (updated_index < 0) {
+					final_index = updated_index + alphabet.length();
+				} else
+					final_index = updated_index;
+				// reverse of encryption is done as
+				// substring here is used to convert
+				// each ciphertext character to plaintext
+				plainTxt = alphabet.substring(final_index, final_index + 1);
+				finalTxt += plainTxt;
+			}
+		}
+		// returning the
+		// final changed text
+		return finalTxt;
+	}
+
+	// method to reset the text
+	// in the output textview
+	private static void reset() {
+		finalTxt = "";
+	}
+}
