@@ -1,6 +1,6 @@
 # Semester_05
--------------
-## SUBJECTS OFFERED
+SUBJECTS OFFERED
+----------------
 -- Innovative Project
 -- Cryptography & Cyber Security
 -- Theory of Computation & Compiler Design
