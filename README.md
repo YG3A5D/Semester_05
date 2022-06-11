@@ -1,7 +1,7 @@
 # Semester_05
 SUBJECTS OFFERED
 ----------------
-# Innovative Project
+## Innovative Project
 # Cryptography & Cyber Security
 # Theory of Computation & Compiler Design
 # Artificial Intelligence
